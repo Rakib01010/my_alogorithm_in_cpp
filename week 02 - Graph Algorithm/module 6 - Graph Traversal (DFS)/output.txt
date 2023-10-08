@@ -1,0 +1,25 @@
+Deth of node 1 :0
+Deth of node 2 :1
+Deth of node 3 :1
+Deth of node 4 :2
+Deth of node 5 :2
+Deth of node 6 :3
+Deth of node 7 :3
+Deth of node 8 :4
+Deth of node 9 :2
+Deth of node 10 :1
+Deth of node 11 :2
+Deth of node 12 :2
+.................................
+height of node 1 :4
+height of node 2 :3
+height of node 3 :1
+height of node 4 :0
+height of node 5 :2
+height of node 6 :1
+height of node 7 :0
+height of node 8 :0
+height of node 9 :0
+height of node 10 :1
+height of node 11 :0
+height of node 12 :0
