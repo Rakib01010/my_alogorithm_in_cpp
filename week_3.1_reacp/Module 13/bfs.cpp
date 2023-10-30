@@ -2,9 +2,7 @@
 using namespace std;
 const int N = 1e5 + 5;
 int dis[N];
-int dis1[N];
 bool vis[N];
-bool vis1[N];
 vector<int> v[N];
 void bfs(int src)
 {
@@ -30,30 +28,6 @@ void bfs(int src)
         }
     }
 }
-void bfs1(int src)
-{
-    queue<int> q;
-    q.push(src);
-    vis1[src] = true;
-    dis1[src] = 0;
-
-    while (!q.empty())
-    {
-        int parent = q.front();
-        q.pop();
-        cout << parent << endl;
-        for (int i = 0; i < v[parent].size(); i++)
-        {
-            int child = v[parent][i];
-            if (vis1[child] == false)
-            {
-                q.push(child);
-                dis1[child] = dis1[parent] + 1;
-                vis1[child] = true;
-            }
-        }
-    }
-}
 int main()
 {
     int n, e;
@@ -65,12 +39,29 @@ int main()
         v[a].push_back(b);
         v[b].push_back(a);
     }
-    //bfs(0);
-    bfs1(1);
+    bfs(1);
     for (int i = 1; i <= n; i++)
     {
         cout << "Node " << i << ": " << dis[i] << endl;
     }
-      cout << "Node "  << ": " << dis[0] << endl;
     return 0;
 }
+
+//i
+// 5 5
+// 1 2
+// 1 3
+// 2 4
+// 3 5
+// 4 5
+// o
+// 1
+// 2
+// 3
+// 4
+// 5
+// Node 1: 0
+// Node 2: 1
+// Node 3: 1
+// Node 4: 2
+// Node 5: 2
